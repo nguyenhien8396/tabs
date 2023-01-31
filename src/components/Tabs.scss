@@ -1,0 +1,76 @@
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  grid-row-gap: 8px;
+  .tab {
+    width: 167px;
+    height: 30px;
+    padding: 4px 0px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    align-items: center;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    .tab-content {
+      border-left: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      padding: 4px 8px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      &:hover {
+        .ic-close {
+          display: flex;
+        }
+      }
+    }
+    .ic-close {
+      display: none;
+      cursor: pointer;
+    }
+    &.active {
+      border-top: 2px solid rgb(233, 55, 55);
+      border-bottom: 0px;
+      border-left: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      .tab-content {
+        border: none;
+      }
+    }
+  }
+  .method {
+    color: #0cbb52;
+    font-size: 9px;
+  }
+  .title {
+    cursor: pointer;
+    margin-left: 4px;
+    color: #6b6b6b;
+    font-size: 11px;
+  }
+  .content-text {
+    display: flex;
+  }
+  
+  .action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    .ic-add, .ic-dot {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      &:hover{
+        background-color: #EDEDED;
+      }
+    }
+  }
+  
+}
